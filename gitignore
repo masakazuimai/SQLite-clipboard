@@ -1,0 +1,38 @@
+# node_modules: ライブラリはGitに含めない（再インストール可能）
+node_modules/
+
+# dist: ビルド生成物（.app, .dmgなど）
+dist/
+out/
+
+# Electronバイナリやビルドされたアプリ
+*.app
+*.dmg
+*.exe
+*.zip
+
+# Electronのpackされたリソース
+*.asar
+
+# Mac固有の不要ファイル
+.DS_Store
+
+# ビルド設定ファイル（機密性がなければ含めてもOK）
+builder-debug.yml
+builder-effective-config.yaml
+
+# npm log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS CodeやJetBrainsの設定
+.vscode/
+.idea/
+
+# テスト・カバレッジ出力
+coverage/
+*.lcov
+
+# OS ワークフローやQuickLook等
+*.workflow/
