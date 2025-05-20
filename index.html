@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clipboard App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <h1>Clipboard</h1>
+
+    <textarea id="inputText" placeholder="コピーしたい内容を入力..." rows="4" cols="60"></textarea><br />
+    <button onclick="copyText()">保存</button>
+    <button onclick="clearOnlyNormal()">履歴削除</button>
+    <button onclick="clearAll()">すべて削除</button>
+
+    <div class="tab-container">
+      <button class="tab active" data-target="normal">📄 履歴</button>
+      <button class="tab" data-target="favorite">⭐ お気に入り</button>
+    </div>
+
+    <div class="tab-content active" id="normal">
+      <ul id="normalList"></ul>
+    </div>
+
+    <div class="tab-content" id="favorite">
+      <ul id="favoriteList"></ul>
+    </div>
+
+    <button onclick="toggleTheme()">🌙 モード切替</button>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
